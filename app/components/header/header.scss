@@ -1,0 +1,136 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    border-bottom: 1px solid #e3e5e6;
+    background-color: transparent;
+}
+
+.header__wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header__btn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: transparent;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.header__btn_active {
+
+    .header__btn-line {
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+
+    .header__btn-line_1 {
+        transform: rotate(45deg) translate(1px, 1px);
+    }
+
+    .header__btn-line_2 {
+        display: none;
+    }
+
+    .header__btn-line_3 {
+        transform: rotate(-45deg);
+    }
+}
+
+.header__btn-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, .5);
+    transform-origin: 50% 50%;
+    transition: .2s;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.logo_header {
+    max-width: 150px;
+}
+
+.logo__link {
+    display: block;
+    width: 150px;
+}
+
+.header__nav {
+    margin-left: 300px;
+    transition: .3s;
+}
+
+.header__nav_active {
+    transform: translateX(0);
+}
+
+.header__list {
+    display: flex;
+}
+
+.header__item-link {
+    display: block;
+    padding: 0 18px;
+    line-height: 118px;
+    font-size: 16px;
+    color: #444;
+    text-decoration: none;
+
+    @include r(1023) {
+        font-size: 14px;
+    }
+}
+
+.header__item {
+    position: relative;
+
+    .header__item-link {
+        transition: .3s;
+    }
+
+    &:hover {
+
+        &::after {
+            background-color: #8fbb1c;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 6px;
+        background-color: transparent;
+        transition: .3s;
+    }
+}
+
+.header__item_active {
+
+    .header__item-link {
+        font-weight: 700;
+        color: #3e3e3e;
+    }
+
+    &::after {
+        background-color: #8fbb1c;
+    }
+}
