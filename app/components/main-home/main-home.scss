@@ -52,6 +52,17 @@
     align-items: flex-start;
     border: 1px solid #eee;
     overflow: hidden;
+    transition: .3s;
+
+    &:hover {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+            0 8px 0 -3px #f6f6f6,
+            0 9px 1px -3px rgba(0, 0, 0, 0.2);
+
+        &::before {
+            transform: scale(1.1);
+        }
+    }
 
     @include r(930) {
         min-height: auto;
@@ -74,6 +85,8 @@
         line-height: 1;
         font-weight: 800;
         color: #ededed;
+        transition: .3s;
+        transform-origin: center center;
 
         @include r(930) {
             top: -25px;

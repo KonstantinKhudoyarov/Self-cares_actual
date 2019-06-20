@@ -42,6 +42,14 @@
     position: relative;
     padding-left: 15px;
 
+    &:hover {
+
+        &::before {
+            transform: translateY(-50%) rotate(360deg) scale(1.4);
+            border-radius: 50%;
+        }
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -52,6 +60,7 @@
         width: 7px;
         height: 7px;
         background-color: #8fbb1c;
+        transition: .5s;
     }
 }
 

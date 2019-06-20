@@ -41,10 +41,22 @@ svg {
     background: none;
     outline: none;
     cursor: pointer;
+
+    &:hover {
+
+        .load-more__icon {
+            transform: rotate(360deg);
+        }
+    }
 }
 
 .load-more-products {
     margin: 0 auto;
+}
+
+.load-more__icon {
+    transform-origin: center center;
+    transition: .3s;
 }
 
 .load-more__text {
