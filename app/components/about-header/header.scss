@@ -6,6 +6,10 @@
     margin-top: 119px;
     padding: 29px 0;
     background-color: #f0f3f6;
+
+    @include r(575) {
+        margin-top: 87px;
+    }
 }
 
 .breadcrumbs__list {
@@ -54,4 +58,9 @@
 .breadcrumbs__link {
     line-height: 32px;
     color: #444;
+
+    @include r(499) {
+        font-size: 15px;
+        line-height: 25px;
+    }
 }

@@ -6,6 +6,12 @@
     width: 100%;
     border-bottom: 1px solid #e3e5e6;
     background-color: transparent;
+
+    @include r(575) {
+        padding: 15px 0;
+        background-color: #f0f3f6;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, .3);
+    }
 }
 
 .header__wrap {
@@ -17,7 +23,7 @@
 .header__btn {
     position: absolute;
     top: 50%;
-    left: 0;
+    right: 0;
     display: none;
     width: 30px;
     height: 30px;
@@ -25,6 +31,10 @@
     background: transparent;
     transform: translateY(-50%);
     cursor: pointer;
+
+    @include r(575) {
+        display: block;
+    }
 }
 
 .header__btn_active {
@@ -74,6 +84,17 @@
 .header__nav {
     margin-left: 25.641%;
     transition: .3s;
+
+    @include r(575) {
+        position: absolute;
+        top: 129%;
+        right: 0;
+        width: 100vw;
+        margin: 0 -10px;
+        background-color: #f0f3d9;
+        transform: translateX(100%);
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+    }
 }
 
 .header__nav_active {
@@ -82,6 +103,10 @@
 
 .header__list {
     display: flex;
+
+    @include r(575) {
+        display: block;
+    }
 }
 
 .header__item-link {
@@ -94,6 +119,11 @@
 
     @include r(1023) {
         font-size: 14px;
+    }
+
+    @include r(575) {
+        text-align: center;
+        line-height: 50px;
     }
 }
 
@@ -120,6 +150,17 @@
         height: 6px;
         background-color: transparent;
         transition: .3s;
+
+        @include r(575) {
+            display: none;
+        }
+    }
+
+    &:not(:last-child) {
+
+        @include r(575) {
+            border-bottom: 1px solid #8fbb1c;
+        }
     }
 }
 

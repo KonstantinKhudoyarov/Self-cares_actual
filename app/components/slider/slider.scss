@@ -17,30 +17,35 @@
     background-size: cover;
 
     .container {
-        position: relative;
-        min-height: 658px;
+        height: 658px;
     }
 }
 
-@for $i from 1 through 3 {
-    .slider__item_#{$i} {
-        background: url('../img/slide-#{$i}.jpg') no-repeat;
-        background-position-x: 45%;
-    }
+.slider__item-wrap {
+    display: flex;
+    height: 100%;
+}
+
+.slider__item_1 {
+    background-color: #f0f3f6;
+}
+
+.slider__item_2 {
+    background-color: #ecebec;
+}
+
+.slider__item_3 {
+    background-color: #f3f3f3;
 }
 
 .slider__img {
     width: 100%;
-
 }
 
 .slider__content {
-    position: absolute;
-    top: 50%;
-    left: 0;
     width: 100%;
     max-width: 555px;
-    transform: translateY(-50%);
+    margin-top: 265px;
 }
 
 .slider__item-title {
