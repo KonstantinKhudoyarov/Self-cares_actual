@@ -49,6 +49,10 @@
         align-items: flex-start;
         width: auto;
     }
+
+    @include r(550) {
+        margin-left: 0;
+    }
 }
 
 .footer__text {
