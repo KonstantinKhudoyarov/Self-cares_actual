@@ -16,6 +16,18 @@
     line-height: 39px;
     font-weight: 800;
     color: #483729;
+
+    @include r(1023) {
+        margin-bottom: 25px;
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    @include r(499) {
+        margin-bottom: 20px;
+        font-size: 25px;
+        line-height: 25px;
+    }
 }
 
 .products {
