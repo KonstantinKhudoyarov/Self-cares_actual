@@ -1,10 +1,3 @@
-.intro {
-
-    @include r(850) {
-        padding-bottom: 20px;
-    }
-}
-
 .slider {
     overflow: hidden;
 }
@@ -12,30 +5,120 @@
 .slider__item {
     position: relative;
     width: 100%;
-    min-height: 658px;
+    height: 658px;
     margin: 0 auto;
     background-size: cover;
 
+    @include r(1100) {
+        height: 520px;
+    }
+
+    @include r(767) {
+        height: 390px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            background-color: rgba(255, 255, 255, .5)
+        }
+    }
+
     .container {
-        height: 658px;
+        height: 100%;
     }
 }
 
 .slider__item-wrap {
+    position: relative;
     display: flex;
     height: 100%;
 }
 
 .slider__item_1 {
     background-color: #f0f3f6;
+
+    @include r(767) {
+        background-image: url(../img/slide-1.png);
+        background-size: cover;
+        background-position: 60px center;
+        background-repeat: no-repeat;
+    }
+
+    .slider__item-pic {
+        right: -310px;
+
+        @include r(1100) {
+            width: 700px;
+            right: -300px;
+        }
+
+        @include r(767) {
+            right: 0;
+        }
+    }
 }
 
 .slider__item_2 {
     background-color: #ecebec;
+
+    @include r(767) {
+        background-image: url(../img/slide-2.png);
+        background-size: cover;
+        background-position: -50px center;
+        background-repeat: no-repeat;
+    }
+
+    .slider__item-pic {
+        right: 10px;
+
+        @include r(950) {
+            right: -135px;
+        }
+
+        @include r(767) {
+            right: 0;
+        }
+    }
 }
 
 .slider__item_3 {
     background-color: #f3f3f3;
+
+    @include r(767) {
+        background-image: url(../img/slide-3.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .slider__item-pic {
+        right: 10px;
+
+        @include r(767) {
+            right: 0;
+        }
+    }
+}
+
+.slider__item-pic {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @include r(1100) {
+        width: 850px;
+    }
+
+    @include r(767) {
+        display: none;
+        width: 100%;
+        z-index: 1;
+    }
 }
 
 .slider__img {
@@ -43,9 +126,24 @@
 }
 
 .slider__content {
+    position: relative;
+    z-index: 2;
     width: 100%;
     max-width: 555px;
     margin-top: 265px;
+    flex-shrink: 0;
+
+    @include r(1100) {
+        margin-top: 190px;
+    }
+
+    @include r(767) {
+        margin-top: 150px;
+    }
+
+    @include r(575) {
+        margin-top: 120px;
+    }
 }
 
 .slider__item-title {
@@ -57,16 +155,18 @@
 
     @include r(1300) {
         font-size: 40px;
+        line-height: 45px;
     }
 
     @include r(1000) {
         margin-bottom: 10px;
         font-size: 35px;
+        line-height: 40px;
     }
 
     @include r(850) {
         font-size: 30px;
-        color: #000;
+        line-height: 35px;
     }
 
     @include r(479) {
@@ -80,12 +180,24 @@
     font-weight: 600;
     color: #4f4f4f;
 
+    @include r(1300) {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    @include r(1000) {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
     @include r(850) {
-        color: #000;
+        font-size: 18px;
+        line-height: 22px;
     }
 
     @include r(479) {
-        line-height: 1.2;
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 
@@ -99,8 +211,16 @@
     transform: translateX(-50%);
     counter-reset: slide;
 
-    @include r(850) {
-        display: none !important;
+    @include r(1100) {
+        bottom: 40px;
+    }
+
+    @include r(1170) {
+        left: 60px;
+    }
+
+    @include r(767) {
+        bottom: 20px;
     }
 
     .slick-active {
@@ -151,6 +271,19 @@
     z-index: 1;
     width: 34px;
     height: 13px;
+    left: calc(50% - 580px);
+
+    @include r(1170) {
+        left: 10px;
+    }
+
+    @include r(1100) {
+        bottom: 110px;
+    }
+
+    @include r(767) {
+        bottom: 80px;
+    }
 
     &::before {
         display: none;
@@ -162,27 +295,15 @@
     background-position: 50%;
     background-size: contain;
     transition: .2s;
-
-    @include r(850) {
-        top: calc(50% - 50px);
-    }
-
-    @include r(479) {
-        top: calc(50% - 60px);
-    }
-
-    @include r(365) {
-        top: calc(50% - 75px);
-    }
 }
 
-.slick-prev {
-    left: calc(50% - 580px);
+// .slick-prev {
+//     left: calc(50% - 580px);
 
-    @include r(479) {
-        left: 15px;
-    }
-}
+//     @include r(479) {
+//         left: 15px;
+//     }
+// }
 
 .slick-next {
     display: none;

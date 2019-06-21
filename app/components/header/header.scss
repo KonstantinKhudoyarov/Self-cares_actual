@@ -14,6 +14,25 @@
     }
 }
 
+.header_home-active {
+    background-color: rgba(#f0f3f6, .7);
+
+    .logo_header {
+        max-width: 120px;
+    }
+
+    .header__item {
+
+        &::after {
+            height: 3px;
+        }
+    }
+
+    .header__item-link {
+        line-height: 74px;
+    }
+}
+
 .header__wrap {
     position: relative;
     display: flex;
@@ -74,11 +93,12 @@
 
 .logo_header {
     max-width: 150px;
+    transition: .3s;
 }
 
 .logo__link {
     display: block;
-    width: 150px;
+    width: 100%;
 }
 
 .header__nav {
