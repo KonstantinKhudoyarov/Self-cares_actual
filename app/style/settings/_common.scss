@@ -8,6 +8,9 @@ body {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     overflow-x: hidden;
@@ -15,6 +18,11 @@ body {
 
 main {
     display: block;
+    flex-grow: 1;
+}
+
+textarea {
+    font-size: 16px;
 }
 
 img {
@@ -34,7 +42,7 @@ svg {
     }
 }
 
-.load-more {
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,23 +56,69 @@ svg {
 
     &:hover {
 
-        .load-more__icon {
+        .btn__icon {
             transform: rotate(360deg);
         }
     }
 }
 
-.load-more-products {
+.btn-products {
     margin: 0 auto;
 }
 
-.load-more__icon {
+.btn_send {
+    position: relative;
+    margin-top: 103px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #8fbb1c;
+        transition: .3s;
+    }
+
+    &:hover {
+
+        &::before {
+            top: 0;
+        }
+
+        .btn__text {
+            color: #fff;
+        }
+    }
+
+    .btn__text {
+        position: relative;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #8fbb1c;
+    }
+
+    @include r(1023) {
+        margin-top: 60px;
+    }
+
+    @include r(767) {
+        margin-top: 40px;
+    }
+}
+
+.btn__img {
+    margin-right: 17px;
+}
+
+.btn__icon {
     transform-origin: center center;
     transition: .3s;
 }
 
-.load-more__text {
-    margin-left: 17px;
+.btn__text {
     font-size: 15px;
     line-height: 24px;
     color: #8fbb1c;

@@ -15,7 +15,9 @@
 }
 
 .header_home-active {
-    background-color: rgba(#f0f3f6, .7);
+    background-color: rgba(#f0f3f6, .8);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+    border-bottom: none;
 
     .logo_header {
         max-width: 120px;
@@ -94,6 +96,10 @@
 .logo_header {
     max-width: 150px;
     transition: .3s;
+
+    @include r(767) {
+        max-width: 120px;
+    }
 }
 
 .logo__link {
@@ -105,6 +111,10 @@
     margin-left: 25.641%;
     transition: .3s;
 
+    @include r(767) {
+        margin-left: 13%;
+    }
+
     @include r(575) {
         position: absolute;
         top: 129%;
@@ -112,7 +122,7 @@
         width: 100vw;
         margin: 0 -10px;
         background-color: #f0f3d9;
-        transform: translateX(100%);
+        transform: translateX(102%);
         box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
     }
 }
@@ -194,4 +204,81 @@
     &::after {
         background-color: #8fbb1c;
     }
+}
+
+.lang {
+    display: flex;
+    position: relative;
+    z-index: 60;
+    padding: 0 10px;
+    margin-left: auto;
+    cursor: pointer;
+
+    @include r(575) {
+        margin-right: 50px;
+    }
+}
+
+.lang_active {
+
+    .lang__arrow {
+        transform: rotate(180deg);
+    }
+
+    .lang__list {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+}
+
+.lang__wrap {
+    display: flex;
+    align-items: center;
+}
+
+.lang__arrow {
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.lang__list {
+    position: absolute;
+    top: 130%;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    transform: translateY(-10px);
+    transition: .3s;
+    pointer-events: none;
+}
+
+.lang__item {
+    padding: 5px 0;
+    text-align: center;
+    transition: .2s;
+
+    &:hover {
+        background-color: rgba(#8fbb1c, .1);
+    }
+}
+
+.lang__flag {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0;
+}
+
+.lang__flag_en {
+    background-image: url(../img/en.png);
+}
+
+.lang__flag_fr {
+    background-image: url(../img/fr.png);
 }

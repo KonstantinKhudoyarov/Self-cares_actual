@@ -74,7 +74,31 @@
     border-radius: 6px;
     overflow: hidden;
 
-    &:not(:last-child) {
+    &:nth-child(1) {
         margin-right: 15px;
+
+        @include r(767) {
+            display: none;
+        }
+    }
+
+    &:nth-child(2) {
+        margin-right: 15px;
+
+        @include r(499) {
+            margin-right: 0;
+        }
+    }
+
+    &:nth-child(3) {
+        margin-right: 15px;
+
+        @include r(767) {
+            margin-right: 0;
+        }
+
+        @include r(499) {
+            display: none;
+        }
     }
 }

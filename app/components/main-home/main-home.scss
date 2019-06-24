@@ -49,11 +49,20 @@
     min-height: 425px;
     padding-top: 35px;
     border: 1px solid #efefef;
+    transition: .3s;
+
+    &:hover {
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .1);
+    }
 
     &:first-child {
 
         @include r(640) {
             margin-right: 10px;
+        }
+
+        @include r(499) {
+            margin-right: 0;
         }
     }
 
@@ -61,6 +70,13 @@
 
         @include r(640) {
             margin-top: 20px;
+        }
+    }
+
+    &:not(:first-child) {
+
+        @include r(499) {
+            margin-top: 15px;
         }
     }
 
@@ -74,7 +90,12 @@
     }
 
     @include r(640) {
-        width: 280px;
+        width: 48%;
+    }
+
+    @include r(499) {
+        width: 100%;
+        max-width: 300px;
     }
 }
 

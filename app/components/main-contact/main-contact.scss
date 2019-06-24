@@ -1,0 +1,104 @@
+.contact__wrap {
+    padding: 45px 65px 57px;
+    border: 1px solid #e1e1e1;
+
+    @include r(640) {
+        padding: 20px 30px;
+    }
+}
+
+.contact__inputs-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @include r(640) {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+}
+
+.contact__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 48%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e1e1e1;
+
+    @include r(640) {
+        width: 100%;
+    }
+
+    &:first-child {
+
+        @include r(640) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.contact__input_email {
+
+    .contact__input-placeholder {
+        top: 0;
+    }
+}
+
+.contact__input_active {
+
+    .contact__input-placeholder {
+        font-size: 14px;
+        line-height: 26px;
+        transform: translateY(-20px);
+        opacity: .8;
+    }
+
+    .cls-1 {
+        fill: #96c02b;
+    }
+}
+
+.contact__input-message {
+    width: 100%;
+
+    .contact__input-placeholder {
+        top: 0;
+    }
+}
+
+.contact__input-placeholder {
+    position: absolute;
+    top: 3px;
+    left: 40px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #444;
+    cursor: text;
+    transition: .2s;
+
+    @include r(1023) {
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    @include r(767) {
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
+
+.contact__input-icon {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.contact__input-field {
+    width: 100%;
+    flex-grow: 1;
+    font-size: 16px;
+    line-height: 32px;
+    color: #444;
+    border: none;
+    resize: none;
+}
