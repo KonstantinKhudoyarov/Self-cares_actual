@@ -291,19 +291,11 @@
 }
 
 .slick-arrow {
-    background: url("../../img/slider-arrow.svg") no-repeat;
+    background: url("../img/slider-arrow.svg") no-repeat;
     background-position: 50%;
     background-size: contain;
     transition: .2s;
 }
-
-// .slick-prev {
-//     left: calc(50% - 580px);
-
-//     @include r(479) {
-//         left: 15px;
-//     }
-// }
 
 .slick-next {
     display: none;
@@ -313,7 +305,7 @@
 .slick-next:hover,
 .slick-prev:focus,
 .slick-prev:hover {
-    background: url("../../img/slider-arrow.svg") no-repeat;
+    background: url("../img/slider-arrow.svg") no-repeat;
     background-position: 50%;
     background-size: contain;
 }
