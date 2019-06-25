@@ -30,13 +30,15 @@
     var langButton = document.querySelector('.lang');
     var langItems = document.querySelectorAll('.lang__item');
     var langMainFlag = document.querySelector('.lang__flag_main');
+    var cdnPath = window.cdn_path || '';
+
     langButton.addEventListener('click', function () {
         this.classList.toggle('lang_active');
     });
 
     for (var i = 0; i < langItems.length; i++) {
         langItems[i].addEventListener('click', function () {
-            langMainFlag.style.backgroundImage = 'url(' + cdn_path + 'img/' + this.dataset.lang + '.png)';
+            langMainFlag.style.backgroundImage = 'url(' + cdnPath + 'img/' + this.dataset.lang + '.png)';
         });
     }
     //END lang switcher

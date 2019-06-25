@@ -52,7 +52,7 @@
 .products__item {
     position: relative;
     width: 48.717%;
-    min-height: 420px;
+    min-height: 430px;
     padding: 40px 30px 30px 16px;
     margin-bottom: 30px;
     display: flex;
@@ -116,6 +116,10 @@
 
     &:nth-last-child(2) {
 
+        @include r(930) {
+            margin-bottom: 30px;
+        }
+
         @include r(499) {
             margin-bottom: 30px;
         }
@@ -168,6 +172,7 @@
 
 .products__pack {
     max-width: 270px;
+    align-self: center;
 }
 
 .products__pack-img {

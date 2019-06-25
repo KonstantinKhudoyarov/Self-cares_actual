@@ -1,1 +1,0 @@
-// scrollHeader(document.querySelector('.header_colored'), 209);

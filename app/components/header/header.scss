@@ -32,6 +32,10 @@
 
     .header__item-link {
         line-height: 74px;
+
+        @include r(575) {
+            line-height: 50px;
+        }
     }
 }
 
@@ -140,29 +144,12 @@
 }
 
 .header__item-link {
+    position: relative;
     display: block;
-    padding: 0 18px;
     line-height: 118px;
     font-size: 16px;
     color: #444;
     text-decoration: none;
-
-    @include r(1023) {
-        font-size: 14px;
-    }
-
-    @include r(575) {
-        text-align: center;
-        line-height: 50px;
-    }
-}
-
-.header__item {
-    position: relative;
-
-    .header__item-link {
-        transition: .3s;
-    }
 
     &:hover {
 
@@ -186,6 +173,24 @@
         }
     }
 
+    @include r(1023) {
+        font-size: 14px;
+    }
+
+    @include r(575) {
+        text-align: center;
+        line-height: 50px;
+    }
+}
+
+.header__item {
+    position: relative;
+    padding: 0 18px;
+
+    .header__item-link {
+        transition: .3s;
+    }
+
     &:not(:last-child) {
 
         @include r(575) {
@@ -199,10 +204,10 @@
     .header__item-link {
         font-weight: 700;
         color: #3e3e3e;
-    }
 
-    &::after {
-        background-color: #8fbb1c;
+        &::after {
+            background-color: #8fbb1c;
+        }
     }
 }
 

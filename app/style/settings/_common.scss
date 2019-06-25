@@ -10,7 +10,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     overflow-x: hidden;
@@ -18,7 +18,11 @@ body {
 
 main {
     display: block;
-    flex-grow: 1;
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
 }
 
 textarea {
@@ -53,17 +57,37 @@ svg {
     background: none;
     outline: none;
     cursor: pointer;
+}
+
+.btn-products {
+    margin: 0 auto;
 
     &:hover {
 
-        .btn__icon {
+        .btn__img {
             transform: rotate(360deg);
         }
     }
 }
 
-.btn-products {
-    margin: 0 auto;
+.btn-products[disabled='disabled'] {
+    border: 1px solid rgba(0, 0, 0, .3);
+    cursor: not-allowed;
+
+    .cls-1 {
+        fill: rgba(0, 0, 0, .3);
+    }
+
+    .btn__text {
+        color: rgba(0, 0, 0, .3);
+    }
+
+    &:hover {
+
+        .btn__img {
+            transform: none;
+        }
+    }
 }
 
 .btn_send {
@@ -111,9 +135,6 @@ svg {
 
 .btn__img {
     margin-right: 17px;
-}
-
-.btn__icon {
     transform-origin: center center;
     transition: .3s;
 }
