@@ -42,7 +42,7 @@
     div {
 
         &:not(:last-child) {
-            margin-bottom: 7px;
+            margin-bottom: 10px;
         }
     }
 
@@ -59,9 +59,9 @@
 
 .footer__text {
     position: relative;
-    padding-left: 33px;
+    padding-left: 40px;
     font-size: 15px;
-    line-height: 24px;
+    line-height: 20px;
     color: #505050;
 
     &::before {
@@ -73,6 +73,10 @@
         display: block;
     }
 
+    @include r(1023) {
+        padding-left: 33px;
+    }
+
     @include r(550) {
         font-size: 14px;
         line-height: 22px;
@@ -82,27 +86,30 @@
 .footer__location {
 
     &::before {
-        width: 23px;
+        width: 28px;
         height: 31px;
         background: url('../img/location-icon.svg') 0 0 no-repeat;
+        background-size: contain;
     }
 }
 
 .footer__web {
 
     &::before {
-        width: 23px;
+        width: 28px;
         height: 23px;
         background: url('../img/web-icon.svg') 0 0 no-repeat;
+        background-size: contain;
     }
 }
 
 .footer__company {
 
     &::before {
-        width: 23px;
+        width: 28px;
         height: 23px;
         background: url('../img/home-icon.svg') 0 0 no-repeat;
+        background-size: contain;
     }
 }
 
@@ -114,9 +121,10 @@
     }
 
     &::before {
-        width: 27px;
+        width: 28px;
         height: 20px;
         background: url('../img/contact-icon.svg') 0 0 no-repeat;
+        background-size: contain;
     }
 }
 

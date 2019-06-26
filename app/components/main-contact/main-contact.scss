@@ -102,3 +102,67 @@
     border: none;
     resize: none;
 }
+
+//styles for ie
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .contact__input {
+
+        .contact__input-placeholder {
+            top: 0;
+        }
+    }
+
+    .contact__input {
+
+        &.contact__input_email {
+
+            .contact__input-placeholder {
+                top: -3px;
+            }
+        }
+    }
+
+    .contact__input {
+
+        &.contact__input-message {
+
+            .contact__input-placeholder {
+                top: -3px;
+            }
+        }
+    }
+}
+
+//styles for firefox
+
+@-moz-document url-prefix() {
+
+    .contact__input {
+
+        .contact__input-placeholder {
+            top: 0px;
+        }
+    }
+
+    .contact__input {
+
+        &.contact__input_email {
+
+            .contact__input-placeholder {
+                top: -1px;
+            }
+        }
+    }
+
+    .contact__input {
+
+        &.contact__input-message {
+
+            .contact__input-placeholder {
+                top: 7px;
+            }
+        }
+    }
+}

@@ -45,7 +45,7 @@
     align-items: flex-start;
 
     @include r(930) {
-        align-items: stretch;
+        justify-content: center;
     }
 }
 
@@ -72,14 +72,19 @@
     }
 
     @include r(930) {
+        width: 100%;
+        max-width: 460px;
         min-height: auto;
         padding: 40px 30px 30px 16px;
-        flex-direction: column;
-        align-items: center;
+        margin-bottom: 25px;
     }
 
     @include r(499) {
         width: 100%;
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
     }
 
     &::before {

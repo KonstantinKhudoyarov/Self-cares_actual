@@ -73,8 +73,12 @@
         background-repeat: no-repeat;
     }
 
+    @include r(550) {
+        background-position: -260px center;
+    }
+
     .slider__item-pic {
-        right: 10px;
+        right: 25px;
 
         @include r(950) {
             right: -135px;
@@ -129,7 +133,7 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 555px;
+    max-width: 578px;
     margin-top: 265px;
     flex-shrink: 0;
 
