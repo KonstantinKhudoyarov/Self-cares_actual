@@ -84,6 +84,11 @@
 }
 
 .footer__location {
+    margin-top: 25px;
+
+    @include r(930) {
+        margin-top: 0;
+    }
 
     &::before {
         width: 28px;
@@ -114,11 +119,6 @@
 }
 
 .footer__contact {
-    margin-top: 25px;
-
-    @include r(930) {
-        margin-top: 0;
-    }
 
     &::before {
         width: 28px;
@@ -130,10 +130,7 @@
 
 .footer__contact-link {
     color: #505050;
-
-    &:hover {
-        text-decoration: underline;
-    }
+    text-decoration: underline;
 }
 
 .footer__web-link {
