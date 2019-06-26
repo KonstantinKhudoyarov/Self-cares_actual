@@ -47,7 +47,7 @@
     align-items: center;
     width: 31.623%;
     min-height: 425px;
-    padding-top: 35px;
+    padding: 35px 20px;
     border: 1px solid #efefef;
     transition: .3s;
 
@@ -86,7 +86,7 @@
 
     @include r(767) {
         padding-top: 10px;
-        min-height: 370px;
+        min-height: 300px;
     }
 
     @include r(640) {
@@ -100,14 +100,20 @@
 }
 
 .main__product-title {
+    margin-bottom: 30px;
     font-size: 26px;
     line-height: 32px;
     font-weight: 600;
     color: #131313;
 
     @include r(1023) {
+        margin-bottom: 20px;
         font-size: 24px;
         line-height: 30px;
+    }
+
+    @include r(767) {
+        margin-bottom: 0;
     }
 
     @include r(499) {
