@@ -317,3 +317,25 @@
 .slick-prev:hover {
     margin-left: -5px;
 }
+
+//styles for ie
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+
+    .slider__item_1 {
+        .slider__item-title {
+            line-height: 35px;
+        }
+    }
+}
+
+//styles for firefox
+
+@-moz-document url-prefix() {
+    .slider__item_1 {
+        .slider__item-title {
+            line-height: 35px;
+        }
+    }
+}

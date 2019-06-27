@@ -70,26 +70,6 @@ svg {
     }
 }
 
-.btn-products[disabled='disabled'] {
-    border: 1px solid rgba(0, 0, 0, .3);
-    cursor: not-allowed;
-
-    .cls-1 {
-        fill: rgba(0, 0, 0, .3);
-    }
-
-    .btn__text {
-        color: rgba(0, 0, 0, .3);
-    }
-
-    &:hover {
-
-        .btn__img {
-            transform: none;
-        }
-    }
-}
-
 .btn_send {
     position: relative;
     margin-top: 103px;
@@ -130,6 +110,10 @@ svg {
 
     @include r(767) {
         margin-top: 40px;
+    }
+
+    @include r(479) {
+        margin: 30px auto 0;
     }
 }
 
