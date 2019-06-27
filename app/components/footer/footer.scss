@@ -111,6 +111,13 @@
         background: url('../img/contact-icon.png') 0 0 no-repeat;
         background-size: contain;
     }
+
+    &:hover {
+
+        .footer__contact-link {
+            text-decoration: none;
+        }
+    }
 }
 
 .footer__location {
@@ -131,6 +138,8 @@
 .footer__contact-link {
     color: #505050;
     text-decoration: underline;
+
+
 }
 
 .footer__web-link {

@@ -3,12 +3,12 @@
 function ShowMore(selector, settings) {
     this.element = document.querySelector(selector);
     this.items = settings.items;
-
     this.element.addEventListener('click', this.renderProducts.bind(this, this.items));
 }
 
 ShowMore.prototype.renderProducts = function (settings) {
     var productsContainer = document.querySelector('.products');
+    var wrapper = document.querySelector('.main_products');
     var buffer = document.createDocumentFragment();
     var cdnPath = window.cdn_path || '';
 
@@ -28,8 +28,8 @@ ShowMore.prototype.renderProducts = function (settings) {
     }
 
     productsContainer.appendChild(buffer);
-    this.element.setAttribute('disabled', 'disabled');
-
+    this.element.parentNode.removeChild(this.element);
+    wrapper.classList.add('main_products-deleted-btn');
 }
 
 var showMore = new ShowMore('.btn-products',
@@ -49,7 +49,7 @@ var showMore = new ShowMore('.btn-products',
                 subtitle: 'Таблетки от псориаза',
                 advantage1: 'Оказывает противовоспалительное действие',
                 advantage2: 'Устраняет зуд и шелушение кожи',
-                advantage3: 'Способствует восстановлению поврежденных участков кожи'
+                advantage3: 'Восстанавливает поврежденные участки кожи'
             },
             {
                 imgSrc: 'img/papilovit.png',
