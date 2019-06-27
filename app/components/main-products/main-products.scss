@@ -230,6 +230,10 @@
 //styles for ie
 @media screen and (-ms-high-contrast: active),
 (-ms-high-contrast: none) {
+    .main {
+        min-height: 65%;
+    }
+
     .products__item {
         height: 433px;
     }

@@ -42,7 +42,13 @@
     div {
 
         &:not(:last-child) {
-            margin-bottom: 10px;
+            @include r(930) {
+                margin-bottom: 10px;
+            }
+
+            @include r(550) {
+                margin-bottom: 5px;
+            }
         }
     }
 
