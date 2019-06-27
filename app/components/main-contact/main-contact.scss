@@ -63,7 +63,7 @@
     width: 100%;
 
     .contact__input-placeholder {
-        top: 0;
+        top: -3px;
     }
 }
 
@@ -75,7 +75,9 @@
     line-height: 32px;
     color: #444;
     cursor: text;
-    transition: .2s;
+    transition: .3s;
+    pointer-events: none;
+
 
     @include r(1023) {
         font-size: 15px;
@@ -103,8 +105,11 @@
     resize: none;
 }
 
-//styles for ie
+.contact__input-field_message {
+    line-height: 22px;
+}
 
+//styles for ie
 @media screen and (-ms-high-contrast: active),
 (-ms-high-contrast: none) {
     .contact__input {
